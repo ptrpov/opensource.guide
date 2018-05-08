@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 6
 before_install:
-  - rvm install 2.3.3
+  - rvm install 2.4.3
   - npm install -g npm@5
 install:
   - npm install
@@ -23,9 +23,6 @@ cache:
   directories:
     - node_modules
     - test/node_modules
-# Tell Travis to build gh-pages branch
-# https://docs.travis-ci.com/user/customizing-the-build#Safelisting-or-blocklisting-branches
 branches:
   only:
-    - gh-pages
-    - /.*/
+    - master
